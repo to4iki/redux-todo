@@ -1,7 +1,10 @@
 redux-todo
 ==========
 
-Implement [TodoMVC](http://todomvc.com/).  
+Implement [TodoMVC](http://todomvc.com/) with undo.  
+[Read Me | Redux](http://rackt.org/redux/index.html)
+
+> The reducer (state, action) => state signature
 
 ## Development
 
