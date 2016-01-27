@@ -7,6 +7,9 @@ import AddTodo from '../components/AddTodo';
 import TodoList from '../components/TodoList';
 import Footer from '../components/Footer';
 
+/**
+ * Contaniners(Smart Components)
+ */
 class App extends React.Component {
 
     static get propTypes() {
@@ -69,9 +72,9 @@ function selectTodos(todos, filter) {
 
 function select(state) {
     return {
-        undoDisabled: todos.past.length === 0,
-        redoDisabled: todos.future.length === 0,
-        visibleTodos: selectTodos(todos.present, state.visibilityFilter),
+        undoDisabled: state.todos.past.length === 0,
+        redoDisabled: state.todos.future.length === 0,
+        visibleTodos: selectTodos(state.todos.present, state.visibilityFilter),
         visibilityFilter: state.visibilityFilter
     }
 }

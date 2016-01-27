@@ -3,6 +3,11 @@ import undoable, { distinctState } from 'redux-undo';
 import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER } from '../constants/ActionTypes';
 import { SHOW_ALL } from '../constants/TodoFilters';
 
+/**
+ * Reducer
+ * (state: A, action) => state: B
+ */
+
 function visibilityFilter(state = SHOW_ALL, action) {
     switch (action.type) {
         case SET_VISIBILITY_FILTER:
